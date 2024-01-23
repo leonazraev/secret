@@ -18,7 +18,7 @@ export async function getStatisticRuntimeService() {
                 name: 1,
                 average_time: {
                     $ifNull: [
-                        { $divide: ['$total_time', '$called_amount'] },
+                        {$divide: ['$total_time', '$called_amount']},
                         0
                     ]
                 },
@@ -29,12 +29,12 @@ export async function getStatisticRuntimeService() {
     return data
 }
 
-export async function updateStatical(nameStatic, totalTime) {
-         StatisticModel.findOneAndUpdate(
-            {name: nameStatic},
-            {$inc: {called_amount: 1}, $set: {total_time: totalTime}},
-            {upsert: true, new: true}
-        ).exec()
+export async function updateStatistic(nameStatic, totalTime) {
+    StatisticModel.findOneAndUpdate(
+        {name: nameStatic},
+        {$inc: {called_amount: 1}, $set: {total_time: totalTime}},
+        {upsert: true, new: true}
+    ).exec()
 }
 
 
