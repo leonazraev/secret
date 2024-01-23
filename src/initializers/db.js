@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-export default function connectDB() {
+
+export function connectDB() {
     try {
         mongoose.connect(process.env.DATABASE_CONNECTION_URL, {
             useNewUrlParser: true,
@@ -18,3 +19,4 @@ export default function connectDB() {
         console.error(`connection error: ${err}`);
     });
 }
+
