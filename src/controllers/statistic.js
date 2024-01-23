@@ -1,4 +1,3 @@
-import express from 'express'
 import {getStatisticRuntimeService, getTopCreatorService} from "../services/statistic.js";
 
 

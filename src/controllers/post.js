@@ -1,4 +1,3 @@
-import express from 'express'
 import {createPostService, getPostsAmountService, getPostsService} from "../services/post.js";
 
 
@@ -18,8 +17,9 @@ export async function createPostController(req, res) {
         const {owner, title, body} = req.body
         const data = await createPostService({owner, title, body})
         res.status(200).send(data)
-    } catch (e) {
-        res.status(e.status).send(e.error)
+    } catch (error) {
+        console.error(error);
+        res.status(error.status).send(error.error)
     }
 }
 
