@@ -16,6 +16,7 @@ export async function getStatisticRuntimeController(req, res) {
         const statisticRuntimes = await getStatisticRuntimeService();
         res.json(statisticRuntimes);
     } catch (error) {
+        console.error(error);
         res.status(error.status).send(error.message);
     }
 }
