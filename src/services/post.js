@@ -19,7 +19,7 @@ export async function getPostsService({start, limit}) {
 }
 
 export async function getPostsAmountService() {
-    // totalPosts()
+    // total()
     return PostModel.countDocuments().exec();
 }
 
