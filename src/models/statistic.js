@@ -15,7 +15,10 @@ const StatisticSchema = new mongoose.Schema({
         default: 0
     }
     //Are you sure about this approach?
-    //They ask for runtime
+    //They ask for runtime avg of the 2 functions, I think you only need a name and runtime
+    //It can be a good question to ask, because it's statistics maybe they want to analyze this data by days? years?
+    //If it does, again think about index to name.
+    //timestamps
 });
 
 const StatisticModel = mongoose.model("Statistic", StatisticSchema);
