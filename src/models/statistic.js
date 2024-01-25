@@ -14,6 +14,8 @@ const StatisticSchema = new mongoose.Schema({
         type: Number,
         default: 0
     }
+    //Are you sure about this approach?
+    //They ask for runtime
 });
 
 const StatisticModel = mongoose.model("Statistic", StatisticSchema);
