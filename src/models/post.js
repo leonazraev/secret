@@ -16,7 +16,8 @@ const PostSchema = new mongoose.Schema({
     },
 
 });
-
+//what about adding index to owner?
+//timestamps?
 const PostModel = mongoose.model("Post", PostSchema);
 
 export default PostModel;
