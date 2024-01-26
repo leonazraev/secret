@@ -1,6 +1,6 @@
 import {createPostService, getPostsAmountService, getPostsService} from "../services/post.js";
 
-
+// Same here with names show,create,total in the file calling it postsController.create etc
 export async function getPostController(req, res) {
     const {start = 0, limit = 10} = req.query;
     try {
