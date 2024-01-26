@@ -1,6 +1,6 @@
 import {updateStatistic} from "../services/statistic.js";
 import {CREATE_POST_NAME, GET_POSTS_NAME} from "../const.js";
-
+// why this file name is Middleware.js? why  ot statistics? then statistics Middleware.measureRequestDuration 
 
 export async function measureRequestDuration(req, res, next) {
     const start = Date.now();
